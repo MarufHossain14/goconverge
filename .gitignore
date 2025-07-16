@@ -1,0 +1,14 @@
+# Binaries
+chat
+chat.exe
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+
+# Go build cache (optional)
+bin/
