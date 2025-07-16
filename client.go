@@ -30,10 +30,35 @@ func (c *client) readInput() {
 
 		switch cmd{
 		case "/nick":
+			c.commands <- command{
+				id: CMD_NICK,
+				client : c,
+				args: args[1:],
+			}
 		case "/join":
+			c.commands <- command{
+				id: CMD_JOIN,
+				client : c,
+				args: args[1:],
+			}
 		case "/rooms":
+			c.commands <- command{
+				id: CMD_ROOMS,
+				client : c,
+				args: args[1:],
+			}
 		case "/msg":
+			c.commands <- command{
+				id: CMD_MSG,
+				client : c,
+				args: args[1:],
+			}
 		case "/quit":
+			c.commands <- command{
+				id: CMD_QUIT,
+				client : c,
+				args: args[1:],
+			}
 		default:
 			c.err(fmt.Errorf("unknown command: %s", cmd))
 				
