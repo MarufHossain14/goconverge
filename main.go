@@ -7,6 +7,8 @@ import (
 
 func main(){
 	S := newServer()
+	go s.run() // start the server to process commands
+
 	listener, err := net.Listen("tcp", ":8888")
 	if err != nil {
 		log.Fatalf("Error starting server: %s", err)
