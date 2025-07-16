@@ -5,8 +5,8 @@ import (
 	"net"
 )
 
-func main(){
-	S := newServer()
+func main() {
+	s := newServer()
 	go s.run() // start the server to process commands
 
 	listener, err := net.Listen("tcp", ":8888")
