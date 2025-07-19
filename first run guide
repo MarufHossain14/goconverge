@@ -1,0 +1,40 @@
+Option 1: Run directly with Go
+```bash
+go run main.go
+```
+Option 2: Build and run the executable
+```bash
+go build .
+./chat.exe
+```
+Option 3: Build with custom name
+```bash
+go build -o goconverge.exe .
+./goconverge.exe
+```
+What you'll see:
+The server will start and show:
+```
+year/month/day XX:XX:XX started server on :8888
+```
+
+To test it:
+Open another terminal/command prompt
+Connect with telnet: telnet localhost 8888
+Use commands like:
+```bash
+/nick <name> - get a name, otherwise user will stay anonymous
+/nick yourname
+/join general
+/msg Hello everyone!
+/rooms
+/quit
+```
+- `/nick <name>` - set your nickname; if not set, you will remain anonymous
+- `/join <room>` - join a chat room (e.g., `general`)
+- `/msg <message>` - send a message to the current room
+- `/rooms` - list all available chat rooms
+- `/quit` - leave the chat
+To run the server, you have three options:
+Make sure you have Go installed and your GOPATH set up correctly.
+The server runs on port 8888 by default. Make sure no other program is using that port!
